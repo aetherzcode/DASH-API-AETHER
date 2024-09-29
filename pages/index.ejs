@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta property="og:site_name" content="api.chaikaloffc.com/dashboard" />
+    <meta property="og:title" content="Dashboard | Prinz Eugen Api" />
+    <meta property="og:url" content="https://api.chaikaloffc.com/dashboard" />
+    <meta property="og:image" content="https://telegra.ph/file/3a9417dfe333e0ff76c65.jpg" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="Prinz Eugen" />
+    <meta property="og:description" content="Dashboard" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Dashboard">
+	<meta name="author" content="ChaikalOffc">
+	<meta name="keywords" content="Dashboard">
+	<title>Dashboard - Prinz Eugen Api</title>
+	<link rel="stylesheet" href="./module/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./module/bootstrap/css/bootstrap-icons.css">
+	<link rel="stylesheet" href="./module/mdi/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/scroll.css">
+    <link rel="stylesheet" href="./css/font.css?family=Inter:wght@300;400;600&display=swap">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="./css/style.css" class="./js-stylesheet">
+	<audio autoplay="autoplay" hidden="hidden" src="https://xyroinee.github.io/audio/one.m4a"></audio>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-119386393-1');
+    </script>
+</head>
+  
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="#">
+					<span class="sidebar-brand-text align-middle">
+					 Prinz Eugen Api
+					</span>
+					<svg class="sidebar-brand-icon align-middle" width="32px" height="32px" viewbox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" color="#FFFFFF" style="margin-left: -3px">
+						<path d="M12 4L20 8.00004L12 12L4 8.00004L12 4Z"></path>
+						<path d="M20 12L12 16L4 12"></path>
+						<path d="M20 16L12 20L4 16"></path>
+					</svg>
+				</a>
+
+				<div class="sidebar-user">
+					<div class="d-flex justify-content-center">
+						<div class="flex-shrink-0">
+							<img src="img/avatars/1.png" class="avatar img-fluid rounded me-1" alt="Xyroinee ID">
+						</div>
+						<div class="flex-grow-1 ps-2">
+							<a class="sidebar-user-title dropdown-toggle" href="#" data-bs-toggle="dropdown">
+								Free User
+							</a>
+							<div class="dropdown-menu dropdown-menu-start">
+								<a class="dropdown-item" href="/profile"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/settings"><i class="align-middle me-1" data-feather="settings"></i> Pengaturan</a>
+								<a class="dropdown-item" href="https://wa.me/6289652552565?text=help!!!"><i class="align-middle me-1" data-feather="help-circle"></i> Bantuan</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/logout">Keluar</a>
+							</div>
+
+							<div class="sidebar-user-subtitle">Powered by: Prinz Eugen. All rights reserved</div>
+						</div>
+					</div>
+				</div>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Pages
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/">
+							<i class="align-middle" data-feather="home"></i><span class="align-middle">Home</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="/dashboard">
+							<i class="align-middle" data-feather="grid"></i><span class="align-middle">Dashboard</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/profile">
+							<i class="align-middle" data-feather="user"></i><span class="align-middle">Profile</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/pricing">
+							<i class="align-middle fa fa-fw bx bx-money"></i><span class="align-middle">Pricing</span>
+						</a>
+					</li>
+				
+					<li class="sidebar-header">
+						Features
+					</li>
+					          <li class="sidebar-item">
+						<a data-bs-target="#anime" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="bell"></i><span class="align-middle">Anime</span>
+						</a>
+						<ul id="anime" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/mangatoons?q=naruto&apikey=<%= apikey %>">Mangatoons<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/nhentai-search?q=Milf&apikey=<%= apikey %>">Nhentai Search<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/nhentai-detail?url=https://nhentai.to/g/406924/&apikey=<%= apikey %>">Nhentai Detail<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/nhentai-get?id=406924&apikey=<%= apikey %>">Nhentai Get<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/nhentai-getimg?url=https://nhentai.to/g/406924/&apikey=<%= apikey %>">Nhentai Getimg<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/mal-anime?q=naruto&apikey=<%= apikey %>">Mal Anime<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/mal-manga?q=naruto&apikey=<%= apikey %>">Mal Manga<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/character?q=naruto&apikey=<%= apikey %>">Mal Character<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/anime/otakudesu-search?q=naruto&apikey=<%= apikey %>">Otakudesu Search<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/otakudesu-detail?url=https://otakudesu.lol/anime/borto-sub-indo/&apikey=<%= apikey %>">Otakudesu Detail<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/otakudesu-latest?apikey=<%= apikey %>">Otakudesu Latest<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/doujin-search?q=Milf&apikey=<%= apikey %>">Doujindesu Search<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/doujin-detail?url=https://otakudesu.lol/anime/borto-sub-indo/&apikey=<%= apikey %>">Doujindesu Detail<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/doujin-latest?apikey=<%= apikey %>">Doujindesu Latest<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/komiku-search?q=Naruto&apikey=<%= apikey %>">Komiku Search<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/komiku-detail?url=https://komiku.id/manga/naruto-konohas-story-the-steam-ninja-scrolls/&apikey=<%= apikey %>">Komiku Detail<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/komiku-latest?apikey=<%= apikey %>">Komiku Latest<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#downloader" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="arrow-down"></i><span class="align-middle">Downloader</span>
+						</a>
+						<ul id="downloader" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/youtube-play?q=dj 30 detik&apikey=<%= apikey %>">Youtube Play<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/youtube-play-audio?q=dj 30 detik&apikey=<%= apikey %>">Youtube Play Audio<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/youtube-play-video?q=dj 30 detik&apikey=<%= apikey %>">Youtube Play Video<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/youtube-audio?url=https://youtu.be/phFILGoPh7M&apikey=<%= apikey %>">Youtube Audio<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/youtube-video?url=https://youtu.be/phFILGoPh7M&apikey=<%= apikey %>">Youtube Video<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/tiktok?url=https://www.tiktok.com/@teresa.jiaa/video/7210297321974762779&apikey=<%= apikey %>">Tiktok<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/facebook?url=https://www.facebook.com/TeguhSuwandi19/videos/5230538373729232/?mibextid=XBoEBUlHZ1eoDabU&apikey=<%= apikey %>">Facebook<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/instagram?url=https://www.instagram.com/reel/Cf1HZNvvGuM/?igshid=YmMyMTA2M2Y=&apikey=<%= apikey %>">Instagram<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/twitter?url=https://twitter.com/faqeeyaaz/status/1242789155173617664?s=20&t=DRgdl9U8MwTwpY0o1o-96g&apikey=<%= apikey %>">Twitter<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/mediafire?url=https://www.mediafire.com/file/pwxob70rpgma9lz/GBWhatsApp_v8.75%2528Tutorial_Yud%2529.apk/file&apikey=<%= apikey %>">Mediafire<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/sfilemobi?url=https://sfile.mobi/qlnWIZtAfA7&apikey=<%= apikey %>">SfileMobi<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/soundcloud?url=https://soundcloud.com/ndaa-212683099/dj-coba-kau-ingat-ingat-kembali-seharusnya-aku-jungle-dutch-terbaru-2021-full-bass-viral-tik?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&apikey=<%= apikey %>">SoundCloud<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/downloader/xnxx?url=https://www.xnxx.com/video-141ewlbb/free_use_anytime_sex_big_ass_latina_milf_step_mom_after_deal_with_step_son&apikey=<%= apikey %>">Xnxx Videos<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#random" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="video"></i><span class="align-middle">Random</span>
+						</a>
+						<ul id="random" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/asupan/video/random?apikey=<%= apikey %>">Random Asupan<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/asupan/image/random?apikey=<%= apikey %>">Random Cecan<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/asupan/image/china?apikey=<%= apikey %>">Cecan China<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/asupan/image/indonesia?apikey=<%= apikey %>">Cecan Indonesia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/asupan/image/japan?apikey=<%= apikey %>">Cecan Japan<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/asupan/image/korean?apikey=<%= apikey %>">Cecan Korean<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/asupan/image/malaysia?apikey=<%= apikey %>">Cecan Malaysia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/asupan/image/thailand?apikey=<%= apikey %>">Cecan Thailand<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/asupan/image/vietnam?apikey=<%= apikey %>">Cecan Vietnam<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/nekopoi?apikey=<%= apikey %>">Random Nekopoi<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/anime/hentai?apikey=<%= apikey %>">Random Hentai<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+						</ul>
+					</li>
+          <li class="sidebar-item">
+						<a data-bs-target="#sfw" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="camera"></i><span class="align-middle">Sfw</span>
+						</a>
+						<ul id="sfw" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/akira?apikey=<%= apikey %>">Akira<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/anna?apikey=<%= apikey %>">Anna<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/asuna?apikey=<%= apikey %>">Asuna<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/ayanokouji?apikey=<%= apikey %>">Ayano<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/ayuzawa?apikey=<%= apikey %>">Ayuzawa<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/bocchi?apikey=<%= apikey %>">Bocchi<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/chisato?apikey=<%= apikey %>">Chisato<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/cosplay?apikey=<%= apikey %>">Cosplay<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/elaina?apikey=<%= apikey %>">Elaina<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/ikuyo?apikey=<%= apikey %>">Ikuyo<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/kaela?apikey=<%= apikey %>">Kaela<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/kaguya?apikey=<%= apikey %>">Kaguya<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/kaori?apikey=<%= apikey %>">Kaori<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/kobo?apikey=<%= apikey %>">Kobo<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/kotori?apikey=<%= apikey %>">Kotori<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/loli?apikey=<%= apikey %>">Loli<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/miku?apikey=<%= apikey %>">Miku<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/neko?apikey=<%= apikey %>">Neko<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/rias?apikey=<%= apikey %>">Rias<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/sakura?apikey=<%= apikey %>">Sakura<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/sasuke?apikey=<%= apikey %>">Sasuke<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/shina?apikey=<%= apikey %>">Shina<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/shinka?apikey=<%= apikey %>">Shinka<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/shizuka?apikey=<%= apikey %>">Shizuka<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/shota?apikey=<%= apikey %>">Shota<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/takina?apikey=<%= apikey %>">Takina<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/waifu?apikey=<%= apikey %>">Waifu<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/yotsuba?apikey=<%= apikey %>">Yotsuba<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/sfw/yumeko?apikey=<%= apikey %>">Yumeko<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+          <li class="sidebar-item">
+						<a data-bs-target="#news" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="bell"></i><span class="align-middle">News</span>
+						</a>
+						<ul id="news" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/news/gempa?&apikey=<%= apikey %>">Gempa<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/news/gempa2?&apikey=<%= apikey %>">Gempa2<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/news/kompas-global?&apikey=<%= apikey %>">Kompas Global<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/news/kompas-news?&apikey=<%= apikey %>">Kompas News<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/news/kompas-populer?&apikey=<%= apikey %>">Kompas Populer<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/news/rumah-keadilan?&apikey=<%= apikey %>">Rumah Keadilan<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/news/tixid?&apikey=<%= apikey %>">Tixid<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#search" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="search"></i><span class="align-middle">Search</span>
+						</a>
+						<ul id="search" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/youtube?q=Somewhere only we know&apikey=<%= apikey %>">Youtube<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/joox?q=Somewhere only we know&apikey=<%= apikey %>">Joox<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/playstore?q=whatsapp&apikey=<%= apikey %>">Playstore<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/bukalapak?q=baju kekinian&apikey=<%= apikey %>">Bukalapak<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/jadwalbola?&apikey=<%= apikey %>">Jadwal Bola<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/kodepos?q=medan&apikey=<%= apikey %>">Kodepos<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/lirik?q=not you alan walker&apikey=<%= apikey %>">Lirik<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/steam?q=monster&apikey=<%= apikey %>">Steam<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/steam-detail?url=https://store.steampowered.com/app/548430/Deep_Rock_Galactic/?snr=1_7_7_151_150_1&apikey=<%= apikey %>">Steam Detail<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/sfilemobi?q=Script Bot&apikey=<%= apikey %>">SfileMobi<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/moddroid?q=WhatsApp&apikey=<%= apikey %>">ModDroid<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/apkmody?q=WhatsApp&apikey=<%= apikey %>">ApkMody<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/happymod?q=WhatsApp&apikey=<%= apikey %>">HappyMod<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/group-whatsapp?q=Programmer&apikey=<%= apikey %>">Group WhatsApp<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/sticker?q=Meme&apikey=<%= apikey %>">Sticker<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/wallpaper?q=Aesthetic&apikey=<%= apikey %>">Wallpaper<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/ringtone?q=Samsung&apikey=<%= apikey %>">Ringtone<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/pinterest?q=Programmer&apikey=<%= apikey %>">Pinterest<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/search/wikimedia?q=Programmer&apikey=<%= apikey %>">Wikimedia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/soundcloud?q=Not%20You&apikey=<%= apikey %>">Soundcloud<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/wattpad?q=Selingkuhan&apikey=<%= apikey %>">Wattpad<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/search/xnxx?q=Milf&apikey=<%= apikey %>">Xnxx Get<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#textpro" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="edit"></i><span class="align-middle">Text Pro</span>
+						</a>
+						<ul id="textpro" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/hologram-color?text=Xyroine&apikey=<%= apikey %>">Hologram Color<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/luxury-crystal?text=Xyroine&apikey=<%= apikey %>">Luxury Crystal<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/metallic?text=Xyroine&apikey=<%= apikey %>">Metallic<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/grunge-metallic?text=Xyroine&apikey=<%= apikey %>">Grunge Metallic<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/liquid-metal?text=Xyroine&apikey=<%= apikey %>">Liquid Metal<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/multicolor-paint?text=Xyroine&apikey=<%= apikey %>">Multicolor Paint<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/pink-gold?text=Xyroine&apikey=<%= apikey %>">Pink Gold<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/burger?text=Xyroine&apikey=<%= apikey %>">Burger<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/cage?text=Xyroine&apikey=<%= apikey %>">Cage<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/comic?text=Xyroine&apikey=<%= apikey %>">Comic<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/neon-light?text=Xyroine&apikey=<%= apikey %>">Neon Light<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/neon-light-2?text=Xyroine&apikey=<%= apikey %>">Neon Light 2<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/gradient-neon-light?text=Xyroine&apikey=<%= apikey %>">Gradient Neon Light<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/orange-juice?text=Xyroine&apikey=<%= apikey %>">Orange Juice<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/valentine?text=Xyroine&apikey=<%= apikey %>">Valentine<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/pencil?text=Xyroine&apikey=<%= apikey %>">Pencil<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/berry?text=Xyroine&apikey=<%= apikey %>">Berry<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/blackpink?text=Xyroine&apikey=<%= apikey %>">Blackpink<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/bear-logo?text=Xyroine&apikey=<%= apikey %>">Bear Logo<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/christmas?text=Xyroine&apikey=<%= apikey %>">Christmas<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/thunder?text=Xyroine&apikey=<%= apikey %>">Thunder<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/box-text?text=Xyroine&apikey=<%= apikey %>">Box Text<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/green-horor?text=Xyroine&apikey=<%= apikey %>">Green Horor<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/magma-hot?text=Xyroine&apikey=<%= apikey %>">Magma Hot<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/chocolate-cake?text=Xyroine&apikey=<%= apikey %>">Chocolate Cake<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/strawberry?text=Xyroine&apikey=<%= apikey %>">Strawberry<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/glitch?text=Xyroine&apikey=<%= apikey %>">Glitch <span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/glitch-2?text=Xyroine&text2=Front end web dev&apikey=<%= apikey %>">Glitch 2<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/glitch-tiktok?text=Xyroine&text2=Front end web dev&apikey=<%= apikey %>">Glitch Tiktok<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/video-game-classic?text=Xyroine&text2=Front end web dev&apikey=<%= apikey %>">Video Game Classic<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/marvel-studios?text=Xyroine&text2=Front end web dev&apikey=<%= apikey %>">Marvel Studios<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/textpro/ninja-logo?text=Xyroine&text2=Front end web dev&apikey=<%= apikey %>">Ninja Logo<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#photooxy" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="camera"></i><span class="align-middle">Photo Oxy</span>
+						</a>
+						<ul id="photooxy" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/flaming?text=Xyroine&apikey=<%= apikey %>">Flaming<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/night-sky?text=Xyroine&apikey=<%= apikey %>">Night Sky<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/shadow-sky?text=Xyroine&apikey=<%= apikey %>">Shadow Sky<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/burn-paper?text=Xyroine&apikey=<%= apikey %>">Burn Paper<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/under-grass?text=Xyroine&apikey=<%= apikey %>">Under Grass<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/under-watter?text=Xyroine&apikey=<%= apikey %>">Under Watter<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/under-white?text=Xyroine&apikey=<%= apikey %>">Under White<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/coffe-cup?text=Xyroine&apikey=<%= apikey %>">Coffe Cup<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/neon-glow?text=Xyroine&apikey=<%= apikey %>">Neon Glow<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/army-camouflage?text=Xyroine&apikey=<%= apikey %>">Army Camouflage<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/glow-text?text=Xyroine&apikey=<%= apikey %>">Glow Text<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/candy-text?text=Xyroine&apikey=<%= apikey %>">Candy Text<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/vintage?text=Xyroine&apikey=<%= apikey %>">Vintage<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/gradient-avatar?text=Xyroine&apikey=<%= apikey %>">Gradient Avatar<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/fur-text?text=Xyroine&apikey=<%= apikey %>">Fur Text<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/api/photooxy/striking?text=Xyroine&apikey=<%= apikey %>">Striking<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            </ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#canvas" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="image"></i><span class="align-middle">Canvas</span>
+						</a>
+						<ul id="canvas" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/canvas/welcome?
+name=Xyroinee&gpname=Vynaa-Ofc&member=3&pp=https://api.xyroinee.xyz/img/avatars/1.png&bg=https://telegra.ph/file/438ba064eff21aa28514d.jpg&apikey=<%= apikey %>">Welcome<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/canvas/goodbye?name=Xyroinee&gpname=Vynaa-Ofc&member=3&pp=https://api.xyroinee.xyz/img/avatars/1.png&bg=https://telegra.ph/file/438ba064eff21aa28514d.jpg&apikey=<%= apikey %>">Goodbye<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            </ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#maker" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-paint-brush"></i> <span class="align-middle">Maker</span>
+						</a>
+						<ul id="maker" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/api/maker/ttp?text=Xyroine&apikey=<%= apikey %>">Ttp<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+          <li class="sidebar-item">
+						<a data-bs-target="#others" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="twitch"></i><span class="align-middle">Others</span>
+						</a>
+						<ul id="others" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/others/stalkgithub?q=Xyroinee&apikey=<%= apikey %>">Stalk Github<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/others/githubrepo?q=Xyroinee&apikey=<%= apikey %>">Github Repo<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/others/chatgpt?q=apa%20itu%20ai&apikey=<%= apikey %>">Openai Gpt<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/others/stabledif?prompt=1girl,%20blush,%20looking%20to%20viewer,%20with%20bra&seed=3&apikey=<%= apikey %>">Stabel Diffusion<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/others/toanime?url=https://i.pinimg.com/originals/67/fc/a5/67fca5aabcffa18393fb3eb4e4dd4b0d.png&apikey=<%= apikey %>">Image To Anime<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/others/chargi?q=Yaemiko&apikey=<%= apikey %>">Chara Genshin Impact<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="/api/others/heroml?q=gusion&apikey=<%= apikey %>">Hero Mobile Legends<span class="sidebar-badge badge bg-primary">Prem</span></a></li>
+						</ul>
+					</li>
+        				
+					<li class="sidebar-header">
+						Contact Me
+					</li>
+
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="https://www.instagram.com/chaikaltdroffc_">
+							<i class="align-middle bx bxl-instagram"></i><span class="align-middle">Instagram</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="https://www.facebook.com/chaikaloffc_">
+							<i class="align-middle bx bxl-facebook"></i><span class="align-middle">Facebook</span>
+							</a>
+						</li>
+							<li class="sidebar-item">
+						<a class="sidebar-link" href="https://wa.me/6289652552565">
+							<i class="align-middle bx bxl-whatsapp"></i><span class="align-middle">WhatsApp</span>
+							</a>
+					</li>
+
+				<div class="sidebar-cta">
+					<div class="sidebar-cta-content">
+						<strong class="d-inline-block mb-2">Upgrade To Premium</strong>
+						<div class="mb-3 text-sm">
+							Upgrade Premium Dan Nikmatin Akses Fitur Premium.
+						</div>
+
+						<div class="d-grid">
+							<a href="/pricing" class="btn btn-outline-primary" target="_blank">Upgrade Sekarang</a>
+						</div>
+					</div>
+				</div>
+				<li class="sidebar-header"></li><li class="sidebar-header"></li>
+			</div>
+		</nav>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle">
+					<i class="hamburger align-self-center"></i>
+				</a>Prinz Eugen Api
+
+				<form class="d-none d-sm-inline-block">
+					<div class="input-group input-group-navbar">
+						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+						<button class="btn" type="button">
+							<i class="align-middle" data-feather="search"></i>
+						</button>
+					</div>
+				</form>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="message-square"></i>
+									<span class="indicator">9+</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<center>
+                 	  			 <iframe src="https://www5.cbox.ws/box/?boxid=944386&boxtag=LzAiPD" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+                  				</center>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Tutup Pesan</a>
+								</div>
+							</div>
+						</li>
+						<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="bell"></i>
+									<span class="indicator">4</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									4 Notifikasi Baru
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-danger" data-feather="alert-circle"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Tanggal Pembuatan</div>
+												<div class="text-muted small mt-1">Prinz Eugen Membuat Rest APIs. 03 September, 2023</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-warning" data-feather="arrow-up"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Tanggal Publish</div>
+												<div class="text-muted small mt-1">Prinz  Publish Rest APIs. 05 Juni, 2023</div>
+											</div>
+										</div>
+									</a>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-success" data-feather="user-plus"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">User Baru</div>
+												<div class="text-muted small mt-1">ChaikalTDR Mendaftar.</div>
+											</div>
+										</div>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-success" data-feather="user-plus"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">User Baru</div>
+												<div class="text-muted small mt-1">Bayu Amore Mendaftar.</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Tutup Semua Notifikasi</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-icon js-fullscreen d-none d-lg-block" href="#">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="maximize"></i>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+								<img src="img/avatars/1.png" class="avatar img-fluid rounded" alt="Xyroinee ID">
+							</a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="/profile"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/settings"><i class="align-middle me-1" data-feather="settings"></i> Pengaturan</a>
+								<a class="dropdown-item" href="https://wa.me/6285760451683?text=help!!!"><i class="align-middle me-1" data-feather="help-circle"></i> Bantuan</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/logout">Keluar</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content" id="apikey">
+				<div class="container-fluid p-0">
+
+					<div class="mb-3">
+						<h1 class="h3 d-inline align-middle">Dashboard</h1></a>
+					</div>
+
+					<div class="row">
+						<div class="col-md-10 col-xl-8 mx-auto">
+							<h1 class="text-center"></h1>
+							<p class="lead text-center mb-4"></p>
+
+							<div class="row justify-content-center mt-3 mb-2">
+								<div class="col-auto">
+									<nav class="nav btn-group">
+									</nav>
+								</div>
+							</div>
+							
+					<div class="row">
+						<div class="col-xl-6 col-xxl-5 d-flex">
+							<div class="w-100">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">INFORMATION</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<i class="align-middle" data-feather="info"></i>
+														</div>
+													</div>
+												</div>
+												<h6 class="mt-1 mb-2"><b>Username: </b><b><%= username %></b></h6>
+												<h6 class="mt-1 mb-2"><b>Your Apikey: </b><b><%= apikey %></b></h6>
+												<h6 class="mt-1 mb-2"><b>Limit Today: </b><b><%= limit %></b></h6>
+												<small style="color: #000;">Limit reset every 00:00 WIB</small>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">IP ADDRESS</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<i class="align-middle" data-feather="wifi"></i>
+														</div>
+													</div>
+												</div>
+												<h3 class="mt-1 mb-2"><b id="ip">0</b></h3>
+												<div class="mb-0">
+													<span class="text-muted">Your IP Address</span>
+												</div>
+											</div>
+										</div>
+									<div class="col-sm-6">
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">FEATURES</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<i class="align-middle" data-feather="list"></i>
+														</div>
+													</div>
+												</div>
+												<h3 class="mt-1 mb-2"><b>200+</b></h1>
+												<div class="mb-0">
+													<span class="badge badge-success-light"> <i class="mdi mdi-arrow-up"></i> 94.8% </span>
+													<span class="text-muted">Feature Active</span>
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">TIME</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<i class="align-middle" data-feather="clock"></i>
+														</div>
+													</div>
+												</div>
+												<h3 class="mt-1 mb-0"><b id="clock">00:00:00</b></h3>
+												<h6 class="mt-1 mb-2"><b id="sayying">Good Morning</b></h6>
+												<div class="mb-0">
+													<span class="text-muted">Clock</span>
+												</div>
+											</div>
+										</div>
+										
+										<br><br>
+										
+										<div class="card">
+											<div class="card-body">
+												<form action="/checkapikeyfree">
+													<h2>Check API Keys Free</h2>
+													<a href="#apikey">Not have key?</a>
+													<input type="apikey" placeholder="Input apikey" name="apikey" required>
+													<br><br>
+													<button class="btn btn-primary">Check</button>
+												</form>
+											</div>
+										</div>
+										
+										<div class="card">
+											<div class="card-body">
+												<form action="/checkapikeypremium">
+													<h2>Check API keys Premium</h2>
+													<a href="/pricing">Not have key?</a>
+													<input type="apikey" placeholder="Input apikey" name="apikey" required>
+													<br><br>
+													<button class="btn btn-primary">Check</button>
+												</form>
+											</div>
+										</div>
+											
+										<div class="card">
+										<div class="card-body">
+											<h2>Example Code</h2>
+											<h4>To get case wa bot</h4>
+											<h6>To get media</h6>
+											<code class="list-group-item list-group-item-action" data-bs-toggle="list" role="tab">
+										<font color="blue">case </font><font color="green">'randomcogan'</font>: {<br>
+result = await getBuffer(`https://<font color="gray">api.chaikaloffc.com/api/cogan/random?apikey=YOUR_APIKEY</font>`)<br>
+client.sendMessage(m.chat, {image: result, mimetype: <font color="green">'image/png'</font>}, {quoted:m})<br>
+}<br>
+<font color="blue">break</font><br>
+									</code>
+										
+											
+											<br><br>
+												<h6>To get text</h6>
+											<code class="list-group-item list-group-item-action" data-bs-toggle="list" role="tab">
+											<font color="blue">case </font><font color="green">'google'</font>: {<br>
+	<font color="blue">var</font> q = args.join(<font color="green">"</font> <font color="green">"</font>)<br><br>
+	<font color="blue">let</font> result = await fetchJson(`https://<font color="gray">api.chaikaloffc.com/api/search/google?q=${q}&apikey=YOUR_APIKEY</font>`)<br>
+	results = ${result.result}<br>
+	reply(`${results}`)<br>
+	}<br>
+	<font color="blue">break</font><br>
+									</code>
+										
+											<br><br><br>
+												<h4>To get router</h4>
+												<h6>To get media</h6>
+											<code class="list-group-item list-group-item-action" data-bs-toggle="list" role="tab">
+										router.<font color="blue">get</font>(<font color="green">'/cogan/random'</font>, async (req, res, next) => {<br>
+<font color="blue">var</font> result = {<br>
+url: `https://<font color="gray">api.chaikaloffc.com/api/cogan/random?apikey=YOUR_APIKEY</font>`, method: 'GET', encoding: null };<br>
+request(result, <font color="blue">function</font>(error, response, body) {<br>
+res.<font color="blue">set</font>(<font color="green">'Content-Type'</font>, <font color="green">'image/png'</font>);<br>
+res.send(body)<br>
+})<br>
+})<br>
+									</code>
+										
+											<br><br>
+											<h6>To get json</h6>
+											<code class="list-group-item list-group-item-action" data-bs-toggle="list" role="tab">
+											router.<font color="blue">get</font>(<font color="green">'/search/google'</font>, async(req, res, next) => {<br>
+	<font color="blue">var</font> q = req.query.q<br><br>
+	
+	<font color="blue">let</font> fetch = require(<font color="green">'node-fetch'</font>)<br>
+	fetch(encodeURI(`https://<font color="gray">api.chaikaloffc.com/api/search/google?q=${q}&apikey=YOUR_APIKEY</font>`))<br>
+	.then(response => response.json())<br>
+	.then(ress => {<br>
+		<font color="blue">var</font> result = ress;<br>
+		res.json({<br>
+			result<br>
+			})<br>
+})})})<br>
+										</code>
+										<br>
+											
+											</div>
+										</div>
+						
+							
+					
+					<div class="card">
+					<div class="card-body">
+						<h2>Web Information</h2>
+						<small id="webinfo">Waiting...</small>
+						</div>
+					</div>
+				</div>
+			</div>
+				</div>
+					</div>
+
+				</div>
+			</main>
+			
+			<!-- Footer -->
+			<footer class="footer">
+				<script type="text/javascript">
+   				 var det = new Date();
+    				var tahun = det.getFullYear();
+    				year = tahun;
+				</script>
+				<div class="container-fluid">
+					<div class="footer-wrap pd-20 mb-20 card-box">
+					Copyright © <script>document.write(year);</script>
+					<a href="https://github.com/c/ChaikalTDR" target="_blank"
+						>ChaikalOffc</a
+					>. All rights reserved.
+				</div>
+				</div>
+			</footer>
+			<!-- End Footer -->
+				
+			<!-- Back To Top -->
+      	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      	  <!-- End Back To Top -->
+      	
+		</div>
+	</div>
+	<script src="./module/jquery/jquery.min.js"></script>
+    <script src="./module/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./module/jquery-easing/jquery.easing.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/dash.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/clock.js"></script>
+</body>
+</html>

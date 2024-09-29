@@ -1,0 +1,43 @@
+<div id="loader-wrapper">
+	<div id="loader"></div>
+	<div class="loader-section section-left"></div>
+	<div class="loader-section section-right"></div>
+</div>
+<div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
+	<div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
+		<div class="flex flex-col overflow-y-auto md:flex-row">
+			<div class="h-32 md:h-auto md:w-1/2">
+				<img aria-hidden="true" class="object-cover w-full h-full dark:hidden" src="/images/forgot-dark.png"
+					alt="forgot password" />
+				<img aria-hidden="true" class="hidden object-cover w-full h-full dark:block"
+					src="/images/forgot-light.png" alt="forgot password" />
+			</div>
+    <div class="row justify-content-center">
+        <div class="col-twelve"  style="font-size: 14px;">
+            <div class="plan-block" data-aos="fade-up"> 
+                <div class="row pricing-content">
+                    <center>
+                        <h4>Hi Owner, You want to delete or add Premium ?</h4>
+                        <a href="/premium/add" class="button button-primary cta">Add Premium</a>
+                        <a href="/premium/delete" class="button button-primary cta">Delete Premium</a>
+                        <a href="/premium/limit" class="button button-primary cta">Reset One Limit</a>
+                    </center>
+                </div>
+            </div>
+            <p></p>
+            <div class="plan-block" data-aos="fade-up"> 
+                <div class="row pricing-content">
+                    <center>
+                        <h4>You Want to Reset All Limit and Today Request ?</h4>
+                        <form method="POST" action="/premium/resetall">
+                            <div>
+                                <input style="font-family:Arial, FontAwesome" name="token" type="text" class="form-control" placeholder="&#xf084;   Token" required>
+                            </div>
+                            <button type="submit" class="button button-primary">Reset All Limit</button>
+                        </form>
+                    </center>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

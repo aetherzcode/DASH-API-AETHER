@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>FXC7 - API</title>
+	<link rel="stylesheet" href="css/tailwind.output.css" />
+	<link rel="stylesheet" href="icon/css/all.css" />
+	<link rel="stylesheet" href="icon/css/all.min.css" />
+	<link rel="stylesheet" href="icon/css/solid.css" />
+	<link rel="stylesheet" href="icon/css/solid.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+	<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal/minimal.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+	<meta property="og:image" content="https://api-xcoders.xyz/images/IMG-20211115-WA0004.jpg" />
+	<link rel="shortcut icon"
+	href="https://cdn.freebiesupply.com/logos/large/2x/the-ground-round-2-logo-png-transparent.png">
+	<meta property="og:title" content="XCoders APIs" />
+	<meta name="description" content=" Farhannnnnn ">
+</head>
+
+<body>
+	<%- include('msg') %>
+	<%- include('errors') %>
+		<%- body %>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="icon/js/all.js"></script>
+<script src="icon/js/all.min.js"></script>
+<script src="icon/js/solid.js"></script>
+<script src="icon/js/data-font.js"></script>
+<script src="icon/js/solid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="js/init-alpine.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+	setTimeout(function () {
+		$('body').addClass('loaded');
+	}, 2000);
+	});
+</script>
+
+</html>
