@@ -4,12 +4,11 @@ const { addPremium, deletePremium, tokens, checkPremium, changeKey, resetOneLimi
 const { notAuthenticated } = require('../lib/auth');
 const { limit_free } = require('../controllers/settings');
 const router = express.Router();
+const { isAuthenticated, isAdminOrPremium } = require('../middleware/auth');
 
-router.get('/', (req, res) => {
-    res.render('premium/index', {
-        layout: 'layouts/main'
-    })
-})
+router.get('/', isAuthenticated, isAdminOrPremium, (req, res) => {
+    res.render('premium/dashboard');
+});
 
 router.get('/add', (req, res) => {
     res.render('premium/add',  {
@@ -38,7 +37,7 @@ router.post('/add', async (req, res) => {
             return res.redirect('/premium');
         }
     }
-})
+});
 
 router.get('/delete', (req, res) => {
     res.render('premium/delete',  {
@@ -124,5 +123,7 @@ router.post('/resetall', (req, res) => {
         return res.redirect('/premium');
     }
 })
+
+// Tambahkan route lain untuk halaman premium di sini
 
 module.exports = router;

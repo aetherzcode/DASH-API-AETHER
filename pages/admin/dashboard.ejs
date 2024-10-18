@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Prince AETHERz Api</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="/dashboard">Back to Main Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <h2>API Keys</h2>
+<% users.forEach(user => { %>
+  <h3><%= user.username %></h3>
+  <ul>
+    <% user.apikeys.forEach(apikey => { %>
+      <li>
+        <%= apikey.key %> (Type: <%= apikey.type %>, Created: <%= apikey.createdAt %>)
+        <form action="/admin/remove-apikey" method="POST" style="display:inline;">
+          <input type="hidden" name="userId" value="<%= user._id %>">
+          <input type="hidden" name="apikey" value="<%= apikey.key %>">
+          <button type="submit">Remove</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+<% }) %>
+
+    </header>
+
+    <main>
+        <section>
+            <h2>User Management</h2>
+            <% users.forEach(user => { %>
+              <div class="user-card">
+                <h3><%= user.username %></h3>
+                <p>Email: <%= user.email %></p>
+                <p>Premium: <%= user.premium ? 'Yes' : 'No' %></p>
+                
+                <h4>API Keys:</h4>
+                <ul>
+                  <% user.apikeys.forEach(apikey => { %>
+                    <li>
+                      <%= apikey %>
+                      <form action="/admin/remove-apikey" method="POST" style="display: inline;">
+                        <input type="hidden" name="userId" value="<%= user._id %>">
+                        <input type="hidden" name="apikey" value="<%= apikey %>">
+                        <button type="submit">Remove</button>
+                      </form>
+                    </li>
+                  <% }) %>
+                </ul>
+                
+                <form action="/admin/add-apikey" method="POST">
+                  <input type="hidden" name="userId" value="<%= user._id %>">
+                  <button type="submit">Add New API Key</button>
+                </form>
+                
+                <form action="/admin/custom-apikey" method="POST">
+                  <input type="hidden" name="userId" value="<%= user._id %>">
+                  <input type="text" name="customApikey" placeholder="Enter custom API key">
+                  <button type="submit">Add Custom API Key</button>
+                </form>
+                
+                <form action="/admin/toggle-premium" method="POST">
+                  <input type="hidden" name="userId" value="<%= user._id %>">
+                  <button type="submit">Toggle Premium</button>
+                </form>
+              </div>
+            <% }) %>
+        </section>
+
+        <section>
+            <h2>API Key Management</h2>
+            <!-- Add API key management functionality here -->
+        </section>
+
+        <section>
+            <h2>Statistics</h2>
+            <!-- Add statistics display here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Prince AETHERz Api. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>

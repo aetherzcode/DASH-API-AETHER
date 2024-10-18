@@ -3,20 +3,20 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta property="og:site_name" content="api.chaikaloffc.com/dashboard" />
-    <meta property="og:title" content="Dashboard | Prinz Eugen Api" />
-    <meta property="og:url" content="https://api.chaikaloffc.com/dashboard" />
+	<meta property="og:site_name" content="dash-api.aetherz.xyz/dashboard" />
+    <meta property="og:title" content="Dashboard | Prince AETHERz Api" />
+    <meta property="og:url" content="https://dash-api.aetherz.xyz/dashboard" />
     <meta property="og:image" content="https://telegra.ph/file/3a9417dfe333e0ff76c65.jpg" />
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
-    <meta property="og:image:alt" content="Prinz Eugen" />
+    <meta property="og:image:alt" content="Prince AETHERz" />
     <meta property="og:description" content="Dashboard" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Dashboard">
-	<meta name="author" content="ChaikalOffc">
+	<meta name="author" content="AETHER">
 	<meta name="keywords" content="Dashboard">
-	<title>Dashboard - Prinz Eugen Api</title>
+	<title>Dashboard - Prince AETHERz Api</title>
 	<link rel="stylesheet" href="./module/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./module/bootstrap/css/bootstrap-icons.css">
 	<link rel="stylesheet" href="./module/mdi/css/materialdesignicons.min.css">
@@ -45,7 +45,7 @@
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="#">
 					<span class="sidebar-brand-text align-middle">
-					 Prinz Eugen Api
+					 Prince AETHERz Api
 					</span>
 					<svg class="sidebar-brand-icon align-middle" width="32px" height="32px" viewbox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" color="#FFFFFF" style="margin-left: -3px">
 						<path d="M12 4L20 8.00004L12 12L4 8.00004L12 4Z"></path>
@@ -67,15 +67,19 @@
 								<a class="dropdown-item" href="/profile"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="/settings"><i class="align-middle me-1" data-feather="settings"></i> Pengaturan</a>
-								<a class="dropdown-item" href="https://wa.me/6289652552565?text=help!!!"><i class="align-middle me-1" data-feather="help-circle"></i> Bantuan</a>
+								<a class="dropdown-item" href="https://wa.me/6285798045817?text=help!!!"><i class="align-middle me-1" data-feather="help-circle"></i> Bantuan</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="/logout">Keluar</a>
 							</div>
 
-							<div class="sidebar-user-subtitle">Powered by: Prinz Eugen. All rights reserved</div>
+							<div class="sidebar-user-subtitle">Powered by: Prince AETHERz. All rights reserved</div>
 						</div>
 					</div>
 				</div>
+
+				<% if (user && user.isAdmin) { %>
+					<a href="/admin" class="nav-link">Admin Panel</a>
+				  <% } %>
 
 				<ul class="sidebar-nav">
 					<li class="sidebar-header">
@@ -354,12 +358,12 @@ name=Xyroinee&gpname=Vynaa-Ofc&member=3&pp=https://api.xyroinee.xyz/img/avatars/
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="https://www.facebook.com/chaikaloffc_">
+							<a class="sidebar-link" href="https://aetherz.xyz">
 							<i class="align-middle bx bxl-facebook"></i><span class="align-middle">Facebook</span>
 							</a>
 						</li>
 							<li class="sidebar-item">
-						<a class="sidebar-link" href="https://wa.me/6289652552565">
+						<a class="sidebar-link" href="https://wa.me/6285798045817">
 							<i class="align-middle bx bxl-whatsapp"></i><span class="align-middle">WhatsApp</span>
 							</a>
 					</li>
@@ -384,7 +388,7 @@ name=Xyroinee&gpname=Vynaa-Ofc&member=3&pp=https://api.xyroinee.xyz/img/avatars/
 			<nav class="navbar navbar-expand navbar-light navbar-bg">
 				<a class="sidebar-toggle js-sidebar-toggle">
 					<i class="hamburger align-self-center"></i>
-				</a>Prinz Eugen Api
+				</a>Prince AETHERz Api
 
 				<form class="d-none d-sm-inline-block">
 					<div class="input-group input-group-navbar">
@@ -434,7 +438,7 @@ name=Xyroinee&gpname=Vynaa-Ofc&member=3&pp=https://api.xyroinee.xyz/img/avatars/
 											</div>
 											<div class="col-10">
 												<div class="text-dark">Tanggal Pembuatan</div>
-												<div class="text-muted small mt-1">Prinz Eugen Membuat Rest APIs. 03 September, 2023</div>
+												<div class="text-muted small mt-1">Prince AETHERz Membuat Rest APIs. 03 September, 2023</div>
 											</div>
 										</div>
 									</a>
@@ -492,7 +496,7 @@ name=Xyroinee&gpname=Vynaa-Ofc&member=3&pp=https://api.xyroinee.xyz/img/avatars/
 								<a class="dropdown-item" href="/profile"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="/settings"><i class="align-middle me-1" data-feather="settings"></i> Pengaturan</a>
-								<a class="dropdown-item" href="https://wa.me/6285760451683?text=help!!!"><i class="align-middle me-1" data-feather="help-circle"></i> Bantuan</a>
+								<a class="dropdown-item" href="https://wa.me/6285798045817?text=help!!!"><i class="align-middle me-1" data-feather="help-circle"></i> Bantuan</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="/logout">Keluar</a>
 							</div>
@@ -638,7 +642,7 @@ name=Xyroinee&gpname=Vynaa-Ofc&member=3&pp=https://api.xyroinee.xyz/img/avatars/
 											<h6>To get media</h6>
 											<code class="list-group-item list-group-item-action" data-bs-toggle="list" role="tab">
 										<font color="blue">case </font><font color="green">'randomcogan'</font>: {<br>
-result = await getBuffer(`https://<font color="gray">api.chaikaloffc.com/api/cogan/random?apikey=YOUR_APIKEY</font>`)<br>
+result = await getBuffer(`https://<font color="gray">dash-api.aetherz.xyz/api/cogan/random?apikey=YOUR_APIKEY</font>`)<br>
 client.sendMessage(m.chat, {image: result, mimetype: <font color="green">'image/png'</font>}, {quoted:m})<br>
 }<br>
 <font color="blue">break</font><br>
@@ -650,7 +654,7 @@ client.sendMessage(m.chat, {image: result, mimetype: <font color="green">'image/
 											<code class="list-group-item list-group-item-action" data-bs-toggle="list" role="tab">
 											<font color="blue">case </font><font color="green">'google'</font>: {<br>
 	<font color="blue">var</font> q = args.join(<font color="green">"</font> <font color="green">"</font>)<br><br>
-	<font color="blue">let</font> result = await fetchJson(`https://<font color="gray">api.chaikaloffc.com/api/search/google?q=${q}&apikey=YOUR_APIKEY</font>`)<br>
+	<font color="blue">let</font> result = await fetchJson(`https://<font color="gray">dash-api.aetherz.xyz/api/search/google?q=${q}&apikey=YOUR_APIKEY</font>`)<br>
 	results = ${result.result}<br>
 	reply(`${results}`)<br>
 	}<br>
@@ -663,7 +667,7 @@ client.sendMessage(m.chat, {image: result, mimetype: <font color="green">'image/
 											<code class="list-group-item list-group-item-action" data-bs-toggle="list" role="tab">
 										router.<font color="blue">get</font>(<font color="green">'/cogan/random'</font>, async (req, res, next) => {<br>
 <font color="blue">var</font> result = {<br>
-url: `https://<font color="gray">api.chaikaloffc.com/api/cogan/random?apikey=YOUR_APIKEY</font>`, method: 'GET', encoding: null };<br>
+url: `https://<font color="gray">dash-api.aetherz.xyz/api/cogan/random?apikey=YOUR_APIKEY</font>`, method: 'GET', encoding: null };<br>
 request(result, <font color="blue">function</font>(error, response, body) {<br>
 res.<font color="blue">set</font>(<font color="green">'Content-Type'</font>, <font color="green">'image/png'</font>);<br>
 res.send(body)<br>
@@ -678,7 +682,7 @@ res.send(body)<br>
 	<font color="blue">var</font> q = req.query.q<br><br>
 	
 	<font color="blue">let</font> fetch = require(<font color="green">'node-fetch'</font>)<br>
-	fetch(encodeURI(`https://<font color="gray">api.chaikaloffc.com/api/search/google?q=${q}&apikey=YOUR_APIKEY</font>`))<br>
+	fetch(encodeURI(`https://<font color="gray">dash-api.aetherz.xyz/api/search/google?q=${q}&apikey=YOUR_APIKEY</font>`))<br>
 	.then(response => response.json())<br>
 	.then(ress => {<br>
 		<font color="blue">var</font> result = ress;<br>
@@ -718,8 +722,8 @@ res.send(body)<br>
 				<div class="container-fluid">
 					<div class="footer-wrap pd-20 mb-20 card-box">
 					Copyright © <script>document.write(year);</script>
-					<a href="https://github.com/c/ChaikalTDR" target="_blank"
-						>ChaikalOffc</a
+					<a href="https://aetherz.xyz" target="_blank"
+						>AETHER</a
 					>. All rights reserved.
 				</div>
 				</div>

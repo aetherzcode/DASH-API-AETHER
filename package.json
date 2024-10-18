@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "ChaikalOffc",
+  "author": "AETHER",
   "dependencies": {
     "@popperjs/core": "^2.11.7",
     "@xct007/frieren-scraper": "^0.0.2",

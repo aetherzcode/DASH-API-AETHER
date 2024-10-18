@@ -9,7 +9,7 @@ const path = require('path');
 const flash = require('connect-flash');
 const rateLimit = require("express-rate-limit");
 const passport = require('passport');
-const expressLayout = require('express-ejs-layouts');
+const expressLayouts = require('express-ejs-layouts');
 const compression = require('compression');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -40,6 +40,7 @@ cron.schedule(
 const mainrouter = require('./routes/index')
     apirouter = require('./routes/api')
     authrouter = require('./routes/auth')
+const adminRouter = require('./routes/admin')
 
 app.set('trust proxy', 1);
 app.use(compression());
@@ -52,14 +53,17 @@ const limit = rateLimit({
 app.use(limit);
 
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 app.set("views", __dirname + "/pages");
-app.use(expressLayout);
+app.use(expressLayouts);
 app.use(express.static("assets"))
 app.use(favicon(path.join(__dirname,'assets','img','favicon','1.png')))
 app.enable('trust proxy');
 app.set("json spaces",2)
 app.use(cors())
 app.use(secure)
+
+app.set('layout', 'layouts/layout'); // sesuaikan path jika perlu
 
 app.use(session({
   secret: 'secret',  
@@ -92,12 +96,24 @@ app.use(function(req, res, next) {
 app.use('/', mainrouter)
 app.use('/', authrouter)
 app.use('/api', apirouter)
+app.use('/admin', adminRouter)
 
 app.use(function (req, res, next) {
     res.render('error', {
     layout: 'error'
   });
 })
+
+const authMiddleware = require('./middleware/auth');
+const isAuthenticated = authMiddleware.isAuthenticated;
+const isAdmin = authMiddleware.isAdmin;
+
+app.get('/admin', isAuthenticated, isAdmin, (req, res) => {
+  res.render('admin/dashboard');
+});
+
+const premiumRouter = require('./routes/premium');
+app.use('/premium', premiumRouter);
 
 app.listen(server, () => {
   console.log(server.text + server.port + server.text2)
